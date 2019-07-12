@@ -6,26 +6,17 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
 
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
+    <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="Rupa"> </constructor-arg>
         <constructor-arg index="1" value="female"> </constructor-arg>
         <constructor-arg index="2" value="22"></constructor-arg>
-
-    </bean>
-
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="Harsha"> </constructor-arg>
-        <constructor-arg index="1" value="male"> </constructor-arg>
-        <constructor-arg index="2" value="19"></constructor-arg>
-
     </bean>
 
 
-    <bean name="movieA,movieB" class="com.stackroute.domain.Movie">
-        <constructor-arg index="0" ref="actor1" ></constructor-arg>
+
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName">
     </bean>
-    <bean id="movie2" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg index="0" ref="actor2" ></constructor-arg>
-    </bean>
+
+
 
 </beans>

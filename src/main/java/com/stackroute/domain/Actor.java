@@ -1,6 +1,11 @@
 package com.stackroute.domain;
 
 public class Actor {
+
+    private String name;
+    private String gender;
+    private int age;
+
     public Actor(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
@@ -19,9 +24,7 @@ public class Actor {
         return age;
     }
 
-    private String name;
-    private String gender;
-    private int age;
+
     public void setName(String name) {
         this.name = name;
     }
