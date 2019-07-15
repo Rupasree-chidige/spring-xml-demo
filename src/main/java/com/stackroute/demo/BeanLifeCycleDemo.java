@@ -14,7 +14,7 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("BeanFile.xml");
 
         ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
-        BeanLifeCycleDemo beanLifeCycleDemo = (BeanLifeCycleDemo) applicationContext.getBean("lifecycle");
+        BeanLifeCycleDemo beanLifeCycleDemo = (BeanLifeCycleDemo) applicationContext.getBean("lifeCycle");
 
 
 

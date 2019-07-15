@@ -7,7 +7,7 @@
 
 
     <bean id="lifeCycle" class="com.stackroute.demo.BeanLifeCycleDemo" init-method="coustomInit" destroy-method="clean" ></bean>
-
+    <bean id="bean" class="com.stackroute.demo.BeanPostProcessorDemo"></bean>
 
 
 </beans>
