@@ -7,10 +7,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
 
+ public  static  void main(String args []) {
 
-
-    public  static  void main(String args []) {
-
+     // using application context 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("BeanFile.xml");
 
         ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
@@ -21,20 +20,22 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
 
 
     }
+    //Init-Method of BeanLifeCycleDemo
     public void coustomInit ()
     {
         System.out.println("Initialization");
     }
+     //Destory of BeanLifeCycleDemo
     public  void clean()
     {
         System.out.println("Destroy Method");
     }
-
+     
     public void destroy ()
     {
         System.out.println("Destroy");
     }
-
+    //Methhod Implementation of InitiatizationBean Interface
     public void afterPropertiesSet () throws Exception {
         System.out.println("After properties");
 
