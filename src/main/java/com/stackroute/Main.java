@@ -15,8 +15,9 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
  public  static  void  main(String[] args)
  {
+  //Using Application context
      ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-     ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
+     
      BeanLifeCycleDemo beanLifeCycleDemo=(BeanLifeCycleDemo) applicationContext.getBean("lifeCycle");
 
 
