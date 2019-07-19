@@ -14,6 +14,8 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
  public  static  void  main(String[] args)
  {
+  
+  //Using Application Bean
      ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
      Movie movie=(Movie)applicationContext.getBean("movie");
      System.out.println("Autowiring using byName: "+movie.toString());
