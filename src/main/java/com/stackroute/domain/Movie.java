@@ -7,6 +7,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
+// movie class which contain Actor As Member Variables , Constructor and overriding toString() method 
      public class Movie {
 
          Actor actor;
