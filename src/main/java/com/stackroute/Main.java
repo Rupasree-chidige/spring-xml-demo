@@ -17,6 +17,8 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
  public  static  void  main(String[] args)
  {
+  
+  //Using ConfigurableApplicationContext Interface
      ConfigurableApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
      BeanLifeCycleDemo beanLifeCycleDemo=(BeanLifeCycleDemo) applicationContext.getBean("lifeCycle");
